@@ -4,6 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sacred Frame Media — Retreat & Spiritual Photography</title>
+<meta name="description" content="Visual storytelling for breathwork, yoga, and conscious retreat experiences. Retreat documentation, brand campaigns, and monthly retainer partnerships.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph / WhatsApp / iMessage / Facebook link preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sacredframemedia.com/">
+<meta property="og:title" content="Sacred Frame Media — Retreat & Spiritual Photography">
+<meta property="og:description" content="Visual storytelling for breathwork, yoga, and conscious retreat experiences. We document the transformations that words cannot hold.">
+<meta property="og:image" content="https://sacredframemedia.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sacred Frame Media — Retreat & Spiritual Photography">
+<meta name="twitter:description" content="Visual storytelling for breathwork, yoga, and conscious retreat experiences.">
+<meta name="twitter:image" content="https://sacredframemedia.com/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -166,6 +189,7 @@
     transition: background 0.3s, gap 0.3s;
     width: fit-content;
     cursor: none;
+    border: none;
   }
   .btn-primary:hover { background: var(--sand-light); gap: 1.5rem; }
   .btn-primary .arrow { font-size: 1rem; }
@@ -210,7 +234,6 @@
                 linear-gradient(to top, var(--obsidian) 0%, transparent 20%);
   }
 
-  /* Placeholder photo panels with atmospheric treatment */
   .photo-placeholder {
     width: 100%; height: 100%;
     background:
@@ -219,7 +242,6 @@
     display: flex; align-items: center; justify-content: center;
     position: relative;
   }
-  /* Simulate textured photo panels */
   .photo-placeholder::before {
     content: '';
     position: absolute; inset: 0;
@@ -238,7 +260,6 @@
   }
   .photo-label span { display: block; font-size: 1.8rem; margin-bottom: 0.5rem; opacity: 0.3; }
 
-  /* Floating stat cards on hero */
   .hero-stat {
     position: absolute;
     bottom: 3rem; left: -1rem;
@@ -264,7 +285,6 @@
     margin-top: 0.3rem;
   }
 
-  /* Scroll indicator */
   .scroll-hint {
     position: absolute;
     bottom: 2.5rem; left: 50%;
@@ -282,10 +302,8 @@
   }
   @keyframes scrollPulse { 0%,100%{height:40px;opacity:1} 50%{height:20px;opacity:0.4} }
 
-  /* Section base */
   section { padding: 8rem 4rem; }
 
-  /* About */
   .about {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -324,7 +342,6 @@
     max-width: 600px;
   }
 
-  /* Services */
   .services { background: var(--deep); }
   .services-header {
     display: flex; justify-content: space-between; align-items: flex-end;
@@ -396,7 +413,6 @@
     color: var(--sand);
   }
 
-  /* Gallery strip */
   .gallery { padding: 0; overflow: hidden; }
   .gallery-strip {
     display: flex;
@@ -431,7 +447,6 @@
     color: rgba(240,235,227,0.5);
     font-style: italic;
     opacity: 0;
-    transition: opacity 0.4s;
     transform: translateY(8px);
     transition: opacity 0.4s, transform 0.4s;
   }
@@ -443,7 +458,6 @@
     background: linear-gradient(to top, rgba(14,13,11,0.6) 0%, transparent 50%);
   }
 
-  /* Gallery texture */
   .gallery-frame::after {
     content: '';
     position: absolute; inset: 0;
@@ -452,7 +466,6 @@
     pointer-events: none;
   }
 
-  /* Retainer section */
   .retainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -514,7 +527,6 @@
     font-family: var(--serif);
   }
 
-  /* Contact */
   .contact {
     text-align: center;
     padding: 10rem 4rem;
@@ -563,7 +575,6 @@
   }
   .contact-email:hover { color: var(--warm-white); border-color: var(--sand); }
 
-  /* Form */
   .contact-form {
     max-width: 560px; margin: 0 auto;
     display: flex; flex-direction: column; gap: 1px;
@@ -615,8 +626,17 @@
     width: 100%;
   }
   .form-submit:hover { background: var(--sand-light); }
+  .form-submit:disabled { cursor: default; }
 
-  /* Footer */
+  .form-error {
+    color: #d98f8f;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+    display: none;
+  }
+  .form-error.visible { display: block; }
+
   footer {
     display: flex; align-items: center; justify-content: space-between;
     padding: 2rem 4rem;
@@ -630,7 +650,6 @@
   .footer-links a { color: rgba(240,235,227,0.25); text-decoration: none; transition: color 0.3s; }
   .footer-links a:hover { color: var(--sand); }
 
-  /* Grain overlay */
   body::after {
     content: '';
     position: fixed; inset: 0;
@@ -641,7 +660,6 @@
     mix-blend-mode: overlay;
   }
 
-  /* Fade-in on scroll */
   .reveal {
     opacity: 0; transform: translateY(24px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -651,7 +669,6 @@
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
 
-  /* Mobile */
   @media (max-width: 768px) {
     nav { padding: 1.5rem 1.5rem; }
     .nav-links { display: none; }
@@ -712,7 +729,6 @@
   </div>
   <div class="hero-right">
     <div class="hero-photo-main">
-      <!-- 📸 HERO IMAGE: Replace hero.jpg with your best Egypt portrait photo -->
       <img src="images/DSC03048.jpg" alt="Sacred Frame Media — retreat photography" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
     </div>
     <div class="hero-stat">
@@ -730,31 +746,26 @@
 <div class="gallery" id="work">
   <div class="gallery-strip">
     <div class="gallery-frame">
-      <!-- 📸 GALLERY 1: Replace gallery-1.jpg — e.g. desert breathwork ceremony wide shot -->
       <div class="gallery-frame-bg" style="background-image:url('images/DSC01928.jpg');background-size:cover;background-position:center;"></div>
       <div class="gallery-overlay"></div>
       <div class="gallery-caption">Desert breathwork ceremony</div>
     </div>
     <div class="gallery-frame">
-      <!-- 📸 GALLERY 2: Replace gallery-2.jpg — e.g. teacher training group -->
       <div class="gallery-frame-bg" style="background-image:url('images/DSC01876.jpg');background-size:cover;background-position:center;"></div>
       <div class="gallery-overlay"></div>
       <div class="gallery-caption">Teacher training, Egypt</div>
     </div>
     <div class="gallery-frame">
-      <!-- 📸 GALLERY 3: Replace gallery-3.jpg — e.g. close up emotion / eyes closed -->
       <div class="gallery-frame-bg" style="background-image:url('images/DSC03124.jpg');background-size:cover;background-position:center;"></div>
       <div class="gallery-overlay"></div>
       <div class="gallery-caption">Surrender in stillness</div>
     </div>
     <div class="gallery-frame">
-      <!-- 📸 GALLERY 4: Replace gallery-4.jpg — e.g. group circle golden hour -->
       <div class="gallery-frame-bg" style="background-image:url('images/DSC02947.jpg');background-size:cover;background-position:center;"></div>
       <div class="gallery-overlay"></div>
       <div class="gallery-caption">Group circle, golden hour</div>
     </div>
     <div class="gallery-frame">
-      <!-- 📸 GALLERY 5: Replace gallery-5.jpg — e.g. quiet candid in-between moment -->
       <div class="gallery-frame-bg" style="background-image:url('images/DSC00195.jpg');background-size:cover;background-position:center;"></div>
       <div class="gallery-overlay"></div>
       <div class="gallery-caption">The in-between</div>
@@ -859,20 +870,31 @@
   </p>
   <a href="mailto:shubham.karwal@gmail.com" class="contact-email reveal">shubham.karwal@gmail.com</a>
 
-  <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm"> <input type="hidden" name="form-name" value="contact"> <p style="display:none">   <label>Don't fill this out if you're human: <input name="bot-field"></label> </p>
+  <!--
+    Netlify Forms setup:
+    - name="contact" identifies this form to Netlify
+    - data-netlify="true" tells Netlify to capture submissions
+    - netlify-honeypot adds basic spam protection (a hidden field bots fill in, humans don't)
+    - the hidden "form-name" input is REQUIRED for Netlify to detect the form at build time
+  -->
+  <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+    <input type="hidden" name="form-name" value="contact">
+    <p style="display:none">
+      <label>Don't fill this out if you're human: <input name="bot-field"></label>
+    </p>
     <div class="form-row">
       <div class="form-field">
         <input type="text" name="name" placeholder="Your name" required>
       </div>
       <div class="form-field">
-        <input type="email" placeholder="Email address" required>
+        <input type="email" name="email" placeholder="Email address" required>
       </div>
     </div>
     <div class="form-field">
-      <input type="text" placeholder="Brand or retreat name">
+      <input type="text" name="brand" placeholder="Brand or retreat name">
     </div>
     <div class="form-field">
-      <select>
+      <select name="interest">
         <option value="" disabled selected style="color:rgba(240,235,227,0.25)">What are you interested in?</option>
         <option>Monthly retainer partnership</option>
         <option>Retreat documentation</option>
@@ -883,9 +905,10 @@
       </select>
     </div>
     <div class="form-field">
-      <textarea rows="4" placeholder="Tell us about your work and what you're looking for..."></textarea>
+      <textarea rows="4" name="message" placeholder="Tell us about your work and what you're looking for..."></textarea>
     </div>
     <button type="submit" class="form-submit">Send enquiry →</button>
+    <p class="form-error" id="formError">Something went wrong — please email us directly at shubham.karwal@gmail.com</p>
   </form>
 </section>
 
@@ -923,15 +946,39 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => obs.observe(el));
 
-  // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sent ✓ We\'ll be in touch shortly';
-    btn.style.background = 'rgba(200,169,126,0.3)';
-    btn.style.color = 'var(--sand-light)';
-    btn.disabled = true;
+  // Form submit — actually sends data to Netlify Forms, then shows confirmation
+  function encodeFormData(formEl) {
+    const formData = new FormData(formEl);
+    return new URLSearchParams(formData).toString();
   }
+
+  const contactForm = document.getElementById('contactForm');
+  const formError = document.getElementById('formError');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const btn = contactForm.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    formError.classList.remove('visible');
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData(contactForm)
+    })
+      .then(() => {
+        btn.textContent = 'Sent ✓ We\'ll be in touch shortly';
+        btn.style.background = 'rgba(200,169,126,0.3)';
+        btn.style.color = 'var(--sand-light)';
+      })
+      .catch(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        formError.classList.add('visible');
+      });
+  });
 </script>
 </body>
 </html>
